@@ -39,7 +39,7 @@
 ### 🛠️ Languages & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,php,bash,react,linux,git,vscode,docker,js" />
+  <img src="https://skillicons.dev/icons?i=python,php,react,linux,vscode,docker,js" />
 </p>
 
 ---
