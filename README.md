@@ -7,7 +7,7 @@
 ---
 
 - 👀 **Interests**: Cybersecurity, Ethical Hacking, Capture The Flag (CTF), Blue/Red Teaming, Malware Analysis  
-- 🌱 **Currently Learning**: Advanced threat detection, stealth VPN protocols, reverse engineering, SOC Level 1 workflows  
+- 🌱 **Currently Learning**: Advanced threat detection, malware analysis, reverse engineering, SOC Level 1 workflows  
 - 💞️ **Looking to Collaborate On**:  
   - Open-source cybersecurity tools  
   - Privacy-focused software  
@@ -48,9 +48,9 @@
 
 | Project | Description |
 |--------|-------------|
-| [SeinVPN](https://github.com/wh1sky02/SeinVPN) | Censorship-resistant custom mobile VPN solution using stealth WebSocket + Reality |
-| [CellTowerLocator](https://github.com/wh1sky02/CellTowerLocator) | Python script for triangulating mobile location using Cell ID + LAC |
-| [LuaGameHacks](https://github.com/wh1sky02/LuaGameHacks) | Android game script framework for writing memory hacks in Lua |
+| [CafeQR](https://github.com/wh1sky02/cafe_qr) | A modern, full-stack Django web application that enables restaurants to manage orders through QR codes|
+| [RavenGPT](https://github.com/wh1sky02/RavenGPT) | A powerful, feature-rich RavenGPT application that runs entirely in your browser |
+| [OPENAIKeyValidator](https://github.com/wh1sky02/openai-api-key-validator) | A web-based tool for bulk OpenAI API key validation featuring a terminal-styled interface |
 
 ---
 
