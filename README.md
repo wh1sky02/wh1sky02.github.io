@@ -65,7 +65,7 @@
 ---
 
 ### 🧠 Random CTF Tip
-> "Enumeration is half the battle. Don’t just run tools—understand the output."
+> "Enumeration is half the battle. Don’t just run tools, understand the output."
 
 ---
 
