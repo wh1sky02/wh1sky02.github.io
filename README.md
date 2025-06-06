@@ -135,34 +135,11 @@ $ python3 analyze.py --static
 
 </div>
 
-## 📊 Battle Statistics
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=wh1sky02&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wh1sky02&layout=compact&langs_count=7&theme=radical"/>
-
-</div>
-
-<div align="center">
-
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=wh1sky02&theme=radical&hide_border=false&stroke=00ff41&ring=00ff41&fire=00ff41&currStreakLabel=00ff41)](https://git.io/streak-stats)
-
-</div>
-
 ## 🏆 Trophy Collection
 
 <div align="center">
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=wh1sky02&theme=radical&no-frame=false&no-bg=false&margin-w=4&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
-## 📈 Contribution Activity
-
-<div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=wh1sky02&theme=redical&hide_border=true&area=true&custom_title=Contribution%20Graph)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 </div>
 
