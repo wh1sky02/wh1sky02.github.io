@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sein Linn - Cybersecurity & Development</title>
+    <title>wh1sky02@terminal:~$ - Cybersecurity & Development</title>
     <meta name="description" content="Cybersecurity enthusiast and full-stack developer from Myanmar">
     
     <!-- CSS -->
@@ -12,194 +12,36 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Monospace for terminal feel -->
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-brand">wh1sky02</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#terminal">Terminal</a>
-            <a href="#contact">Contact</a>
+    <div class="terminal-container">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">wh1sky02@kali-linux: ~</div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <div class="ascii-art">
- ██╗    ██╗██╗  ██╗ ██╗███████╗██╗  ██╗██╗   ██╗ ██████╗ ██████╗ 
- ██║    ██║██║  ██║███║██╔════╝██║ ██╔╝╚██╗ ██╔╝██╔═══██╗╚════██╗
- ██║ █╗ ██║███████║╚██║███████╗█████╔╝  ╚████╔╝ ██║   ██║ █████╔╝
- ██║███╗██║██╔══██║ ██║╚════██║██╔═██╗   ╚██╔╝  ██║   ██║██╔═══╝ 
- ╚███╔███╔╝██║  ██║ ██║███████║██║  ██╗   ██║   ╚██████╔╝███████╗
-  ╚══╝╚══╝ ╚═╝  ╚═╝ ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝
-            </div>
-            <h1>Sein Linn</h1>
-            <p class="subtitle">Cybersecurity Enthusiast & Full Stack Developer</p>
-            <div class="hero-stats">
-                <span><i class="fas fa-map-marker-alt"></i> Myanmar</span>
-                <span><i class="fas fa-graduation-cap"></i> Computer Science Student</span>
-                <span><i class="fas fa-shield-alt"></i> Security Researcher</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I'm a Computer Science student from Myanmar with a passion for cybersecurity and web development. I love breaking things (legally) to understand how to secure them better.</p>
-                <p>When I'm not hunting for vulnerabilities or building web applications, you can find me participating in CTF competitions or contributing to open-source security projects.</p>
-            </div>
-            <div class="about-stats">
-                <div class="stat-item">
-                    <span class="stat-number">2+</span>
-                    <span class="stat-label">Years Coding</span>
+        <!-- Terminal Body -->
+        <div class="terminal-body" id="terminal">
+            <!-- Interactive Command Line -->
+            <div class="command-input-section">
+                <div class="terminal-line">
+                    <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Projects Built</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">∞</span>
-                    <span class="stat-label">Problems Solved</span>
+                <div class="terminal-line input-line">
+                    <span class="prompt">└─$</span> 
+                    <input type="text" id="command-input" class="command-input" placeholder="Type a command... (try 'help')" autocomplete="off">
+                    <span class="cursor-blink">█</span>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <div class="skill-items">
-                    <span class="skill-item">Python</span>
-                    <span class="skill-item">JavaScript</span>
-                    <span class="skill-item">PHP</span>
-                    <span class="skill-item">Bash</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Security Tools</h3>
-                <div class="skill-items">
-                    <span class="skill-item">Kali Linux</span>
-                    <span class="skill-item">Burp Suite</span>
-                    <span class="skill-item">Wireshark</span>
-                    <span class="skill-item">Metasploit</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Frameworks</h3>
-                <div class="skill-items">
-                    <span class="skill-item">React</span>
-                    <span class="skill-item">Django</span>
-                    <span class="skill-item">Node.js</span>
-                    <span class="skill-item">Express</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Others</h3>
-                <div class="skill-items">
-                    <span class="skill-item">Git</span>
-                    <span class="skill-item">Docker</span>
-                    <span class="skill-item">Linux</span>
-                    <span class="skill-item">MongoDB</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>CafeQR</h3>
-                <p class="project-description">Modern Django QR ordering system for restaurants with real-time order management.</p>
-                <div class="project-tech">Django, Python, JavaScript</div>
-                <a href="https://github.com/wh1sky02/cafe_qr" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-            
-            <div class="project-card">
-                <h3>RavenGPT</h3>
-                <p class="project-description">Browser-based GPT application with clean interface and advanced features.</p>
-                <div class="project-tech">JavaScript, HTML/CSS, API</div>
-                <a href="https://github.com/wh1sky02/RavenGPT" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-            
-            <div class="project-card">
-                <h3>API-Validator</h3>
-                <p class="project-description">Tool for testing and validating API endpoints with security checks.</p>
-                <div class="project-tech">Python, REST APIs, Security</div>
-                <a href="#" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Terminal Section -->
-    <section id="terminal" class="section">
-        <h2 class="section-title">Interactive Terminal</h2>
-        <div class="terminal-container">
-            <div class="terminal-header">
-                <div class="terminal-buttons">
-                    <span class="btn-close"></span>
-                    <span class="btn-minimize"></span>
-                    <span class="btn-maximize"></span>
-                </div>
-                <div class="terminal-title">wh1sky02@kali-linux: ~</div>
-            </div>
-            <div class="terminal-body" id="terminal">
-                <div class="command-input-section">
-                    <div class="terminal-line">
-                        <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
-                    </div>
-                    <div class="terminal-line input-line">
-                        <span class="prompt">└─$</span> 
-                        <input type="text" id="command-input" class="command-input" placeholder="Type a command... (try 'help')" autocomplete="off">
-                        <span class="cursor-blink">█</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <a href="https://github.com/wh1sky02" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="mailto:your.email@example.com">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Sein Linn. All rights reserved.</p>
-        <p class="motto">Breaking things to make them more secure.</p>
-    </footer>
+    </div>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
