@@ -1,8 +1,18 @@
-/* Terminal Theme CSS */
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #00ff00;
+    --secondary-color: #58a6ff;
+    --bg-color: #0d1117;
+    --section-bg: #161b22;
+    --text-color: #c9d1d9;
+    --border-color: #30363d;
+    --hover-color: #21262d;
 }
 
 html {
@@ -10,31 +20,281 @@ html {
 }
 
 body {
-    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', 'Lucida Console', monospace;
-    background-color: #0d1117;
-    color: #00ff00;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* Terminal Container */
-.terminal-container {
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(13, 17, 23, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.nav-brand {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(rgba(13, 17, 23, 0.9), rgba(13, 17, 23, 0.9)),
+                url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><text y=".9em" font-size="90">🛡️</text></svg>');
+    background-size: cover;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.ascii-art {
+    color: var(--primary-color);
+    font-size: 10px;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-family: monospace;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-stats i {
+    color: var(--primary-color);
+}
+
+/* Section Styles */
+.section {
+    padding: 5rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 1rem auto;
+}
+
+/* About Section */
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text {
+    background: var(--section-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.about-stats {
+    display: grid;
+    gap: 1rem;
+}
+
+.stat-item {
+    background: var(--section-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.stat-number {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    display: block;
+}
+
+.stat-label {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     max-width: 1200px;
-    margin: 20px auto;
-    background-color: #161b22;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: var(--section-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.skill-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-item {
+    background: var(--hover-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: var(--section-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-description {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-tech {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background: var(--hover-color);
+    transition: all 0.3s;
+}
+
+.project-link:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* Terminal Section */
+.terminal-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--section-bg);
     border-radius: 8px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid #30363d;
-    min-height: 90vh;
+    border: 1px solid var(--border-color);
 }
 
-/* Terminal Header */
 .terminal-header {
     background: linear-gradient(90deg, #21262d 0%, #2d333b 100%);
     padding: 12px 20px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #30363d;
+    border-bottom: 1px solid var(--border-color);
     border-radius: 8px 8px 0 0;
 }
 
@@ -49,11 +309,6 @@ body {
     height: 12px;
     border-radius: 50%;
     cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-.terminal-buttons span:hover {
-    opacity: 0.8;
 }
 
 .btn-close { background: #ff5f57; }
@@ -61,133 +316,105 @@ body {
 .btn-maximize { background: #28ca42; }
 
 .terminal-title {
-    color: #c9d1d9;
+    color: var(--text-color);
     font-size: 14px;
-    font-weight: 500;
 }
 
-/* Terminal Body */
 .terminal-body {
     padding: 20px;
-    min-height: 600px;
-    background-color: #0d1117;
+    min-height: 400px;
+    max-height: 600px;
+    overflow-y: auto;
     font-size: 14px;
-    line-height: 1.5;
+    background-color: var(--bg-color);
 }
 
 .terminal-line {
     margin-bottom: 8px;
-    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .prompt {
-    color: #58a6ff;
-    font-weight: 600;
+    color: var(--secondary-color);
+    white-space: nowrap;
 }
 
 .terminal-output {
     margin: 10px 0 20px 0;
-    padding-left: 0;
-}
-
-/* ASCII Art */
-.ascii-art {
-    color: #00ff00;
-    font-size: 10px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    font-family: monospace;
-    white-space: pre;
-    overflow-x: auto;
-}
-
-/* Welcome Text */
-.welcome-text p {
-    margin-bottom: 5px;
-}
-
-.highlight {
-    color: #ffa500;
-    font-weight: 600;
-}
-
-/* File Listing */
-.file-listing {
-    color: #c9d1d9;
-}
-
-.file-item {
-    margin-bottom: 4px;
-    font-family: 'JetBrains Mono', monospace;
-}
-
-.file-name {
-    color: #58a6ff;
-    font-weight: 500;
-}
-
-/* Help Text */
-.help-text {
-    color: #c9d1d9;
-}
-
-.command {
-    color: #ffa500;
-    font-weight: 600;
-}
-
-.cmd {
-    color: #00ff00;
-    font-weight: 600;
-}
-
-/* Command Input */
-.command-input-section {
-    margin-top: 30px;
-    position: sticky;
-    bottom: 20px;
-}
-
-.input-line {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    color: var(--text-color);
 }
 
 .command-input {
     background: transparent;
     border: none;
-    color: #00ff00;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
+    color: var(--primary-color);
+    font-family: inherit;
+    font-size: inherit;
     outline: none;
     flex: 1;
-    padding: 0;
-}
-
-.command-input::placeholder {
-    color: #6e7681;
 }
 
 .cursor-blink {
-    color: #00ff00;
+    color: var(--primary-color);
     animation: blink 1s infinite;
 }
 
+/* Contact Section */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--section-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.contact-info a:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.contact-info i {
+    font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--section-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+.motto {
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Animations */
 @keyframes blink {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
-}
-
-/* Hidden Sections */
-.hidden-section {
-    display: none;
-    margin-top: 20px;
-}
-
-.hidden-section.show {
-    display: block;
-    animation: fadeIn 0.5s ease-in;
 }
 
 @keyframes fadeIn {
@@ -195,249 +422,45 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* JSON Output */
-.json-output {
-    background: #21262d;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    padding: 15px;
-    color: #c9d1d9;
-    font-family: 'JetBrains Mono', monospace;
-    overflow-x: auto;
-    white-space: pre;
-}
-
-/* Project Listing */
-.project-listing {
-    color: #c9d1d9;
-}
-
-.project-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #21262d;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    transition: border-color 0.3s ease;
-}
-
-.project-item:hover {
-    border-color: #58a6ff;
-}
-
-.project-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-
-.file-permissions {
-    color: #6e7681;
-    font-size: 12px;
-}
-
-.project-name {
-    color: #58a6ff;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.github-link {
-    color: #00ff00;
-    text-decoration: none;
-    font-size: 12px;
-    border: 1px solid #00ff00;
-    padding: 2px 6px;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-
-.github-link:hover {
-    background: #00ff00;
-    color: #0d1117;
-}
-
-.project-description {
-    color: #c9d1d9;
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
-
-.project-tech {
-    color: #ffa500;
-    font-size: 12px;
-    font-style: italic;
-}
-
-/* Contact Info */
-.contact-info {
-    color: #c9d1d9;
-}
-
-.contact-info p {
-    margin-bottom: 8px;
-}
-
-.contact-info a {
-    color: #58a6ff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: #00ff00;
-}
-
-.contact-info i {
-    color: #00ff00;
-    margin-right: 8px;
-    width: 16px;
-}
-
-/* Terminal Footer */
-.terminal-footer {
-    background: #21262d;
-    border-top: 1px solid #30363d;
-    padding: 15px 20px;
-    text-align: center;
-    color: #6e7681;
-    font-size: 12px;
-    border-radius: 0 0 8px 8px;
-}
-
-.terminal-footer p {
-    margin-bottom: 5px;
-}
-
-.motto {
-    color: #ffa500;
-    font-style: italic;
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #21262d;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #30363d;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #484f58;
-}
-
-/* Selection */
-::selection {
-    background: #00ff00;
-    color: #0d1117;
-}
-
-/* Matrix Rain Effect (Optional) */
-.matrix-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.03;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    .terminal-container {
-        margin: 10px;
-        border-radius: 0;
+    .navbar {
+        padding: 1rem;
     }
-    
-    .terminal-body {
-        padding: 15px;
+
+    .nav-links {
+        gap: 1rem;
     }
-    
-    .ascii-art {
-        font-size: 8px;
-        overflow-x: auto;
+
+    .hero-content h1 {
+        font-size: 2rem;
     }
-    
-    .terminal-header {
-        padding: 10px 15px;
+
+    .subtitle {
+        font-size: 1.2rem;
     }
-    
-    .command-input {
-        font-size: 12px;
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info a {
+        width: 100%;
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
     .ascii-art {
-        font-size: 6px;
+        font-size: 8px;
     }
-    
-    .terminal-body {
-        padding: 10px;
-        font-size: 12px;
+
+    .section {
+        padding: 3rem 1rem;
     }
-    
-    .project-item {
-        padding: 10px;
+
+    .skill-category,
+    .project-card {
+        padding: 1.5rem;
     }
-}
-
-/* Terminal Typing Animation */
-.typing-animation {
-    border-right: 2px solid #00ff00;
-    animation: typing 0.1s infinite;
-}
-
-@keyframes typing {
-    0% { border-color: #00ff00; }
-    50% { border-color: transparent; }
-    100% { border-color: #00ff00; }
-}
-
-/* Command History */
-.command-history {
-    margin-bottom: 10px;
-}
-
-.command-history .terminal-line {
-    color: #6e7681;
-}
-
-/* Error Messages */
-.error-message {
-    color: #ff6b6b;
-    font-weight: 500;
-}
-
-/* Success Messages */
-.success-message {
-    color: #00ff00;
-    font-weight: 500;
-}
-
-/* Loading Animation */
-.loading {
-    color: #ffa500;
-}
-
-.loading::after {
-    content: '';
-    animation: dots 1.5s infinite;
-}
-
-@keyframes dots {
-    0%, 20% { content: ''; }
-    40% { content: '.'; }
-    60% { content: '..'; }
-    80%, 100% { content: '...'; }
 } 

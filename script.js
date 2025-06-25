@@ -2,13 +2,9 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
@@ -136,6 +132,202 @@ window.addEventListener('load', function() {
             heroImage.style.transform = 'translateX(0)';
         }, 600);
     }
+});
+
+// Terminal functionality
+const terminal = {
+    commandHistory: [],
+    currentHistoryIndex: -1,
+    
+    commands: {
+        help: () => {
+            return `Available Commands:
+  whoami          - Display user information
+  cat about       - View personal information
+  cat skills      - List technical skills
+  ls projects     - Show featured projects
+  cat contact     - Get contact information
+  clear           - Clear terminal screen
+  help            - Show this help menu`;
+        },
+        
+        whoami: () => {
+            return `wh1sky02\n\nuid=1000(wh1sky02) gid=1000(wh1sky02) groups=1000(wh1sky02),4(adm),27(sudo)`;
+        },
+        
+        cat: (arg) => {
+            switch(arg) {
+                case 'about':
+                    return `[ABOUT] Personal Information
+I'm a Computer Science student from Myanmar with a passion for cybersecurity
+and web development. I love breaking things (legally) to understand how to
+secure them better.
+
+When I'm not hunting for vulnerabilities or building web applications,
+you can find me participating in CTF competitions or contributing to
+open-source security projects.`;
+                    
+                case 'skills':
+                    return `{
+  "programming_languages": ["Python", "JavaScript", "PHP", "Bash"],
+  "security_tools": ["Kali Linux", "Burp Suite", "Wireshark", "Metasploit"],
+  "frameworks": ["React", "Django", "Node.js", "Express"],
+  "tools_and_others": ["Git", "Docker", "Linux", "MongoDB"]
+}`;
+                    
+                case 'contact':
+                    return `[CONTACT] Let's Connect!
+
+GitHub: https://github.com/wh1sky02
+Email: your.email@example.com
+LinkedIn: https://linkedin.com/in/yourusername`;
+                    
+                default:
+                    return `cat: ${arg}: No such file or directory`;
+            }
+        },
+        
+        ls: (arg) => {
+            if (arg === 'projects') {
+                return `drwxr-xr-x  CafeQR/         - Modern Django QR ordering system
+drwxr-xr-x  RavenGPT/       - Browser-based GPT application
+drwxr-xr-x  API-Validator/  - API testing and validation tool`;
+            }
+            return `ls: ${arg}: No such directory`;
+        },
+        
+        clear: () => {
+            const output = document.querySelector('.terminal-body');
+            while (output.firstChild) {
+                if (output.lastChild.classList.contains('command-input-section')) {
+                    break;
+                }
+                output.removeChild(output.firstChild);
+            }
+            return '';
+        }
+    },
+    
+    execute: function(commandLine) {
+        const [command, ...args] = commandLine.trim().split(' ');
+        
+        if (command === '') return '';
+        
+        if (this.commands[command]) {
+            return this.commands[command](...args);
+        }
+        
+        return `Command not found: ${command}. Type 'help' for available commands.`;
+    }
+};
+
+// Terminal Input Handling
+document.addEventListener('DOMContentLoaded', () => {
+    const commandInput = document.getElementById('command-input');
+    const terminalBody = document.querySelector('.terminal-body');
+    
+    if (commandInput && terminalBody) {
+        commandInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                
+                const command = commandInput.value;
+                terminal.commandHistory.push(command);
+                terminal.currentHistoryIndex = terminal.commandHistory.length;
+                
+                // Add command to output
+                const commandLine = document.createElement('div');
+                commandLine.className = 'terminal-line';
+                commandLine.innerHTML = `<span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>`;
+                terminalBody.insertBefore(commandLine, terminalBody.lastElementChild);
+                
+                const commandLine2 = document.createElement('div');
+                commandLine2.className = 'terminal-line';
+                commandLine2.innerHTML = `<span class="prompt">└─$</span> ${command}`;
+                terminalBody.insertBefore(commandLine2, terminalBody.lastElementChild);
+                
+                // Execute command and show output
+                const output = terminal.execute(command);
+                if (output) {
+                    const outputDiv = document.createElement('div');
+                    outputDiv.className = 'terminal-output';
+                    outputDiv.innerText = output;
+                    terminalBody.insertBefore(outputDiv, terminalBody.lastElementChild);
+                }
+                
+                commandInput.value = '';
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+            }
+            
+            // Command history navigation
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (terminal.currentHistoryIndex > 0) {
+                    terminal.currentHistoryIndex--;
+                    commandInput.value = terminal.commandHistory[terminal.currentHistoryIndex];
+                }
+            }
+            
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (terminal.currentHistoryIndex < terminal.commandHistory.length - 1) {
+                    terminal.currentHistoryIndex++;
+                    commandInput.value = terminal.commandHistory[terminal.currentHistoryIndex];
+                } else {
+                    terminal.currentHistoryIndex = terminal.commandHistory.length;
+                    commandInput.value = '';
+                }
+            }
+        });
+        
+        // Focus input when clicking anywhere in terminal
+        terminalBody.addEventListener('click', () => {
+            commandInput.focus();
+        });
+    }
+});
+
+// Add active class to nav links on scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - 60) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Animate elements on scroll
+const observerOptions = {
+    root: null,
+    threshold: 0.1,
+    rootMargin: "0px"
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.section > *').forEach((el) => {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
 });
 
 // Terminal Portfolio Interactive Script
