@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sein Linn - Cybersecurity & Development</title>
+    <title>wh1sky02@terminal:~$ - Cybersecurity & Development</title>
     <meta name="description" content="Cybersecurity enthusiast and full-stack developer from Myanmar">
     
     <!-- CSS -->
@@ -12,257 +12,243 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Monospace for terminal feel -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Sein Linn</a>
+    <div class="terminal-container">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
             </div>
-            <div class="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div class="terminal-title">wh1sky02@kali-linux: ~</div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                Hi, I'm <span class="highlight">Sein Linn</span>
-            </h1>
-            <p class="hero-subtitle">Cybersecurity Enthusiast & Full Stack Developer</p>
-            <p class="hero-description">
-                Computer Science student from Myanmar passionate about ethical hacking, 
-                web development, and making the digital world safer.
-            </p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="#projects" class="btn btn-secondary">View Projects</a>
+        <!-- Terminal Body -->
+        <div class="terminal-body" id="terminal">
+            <!-- Welcome Section -->
+            <div class="terminal-line">
+                <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
             </div>
-            <div class="social-links">
-                <a href="https://github.com/wh1sky02" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://t.me/wh1sky02" target="_blank"><i class="fab fa-telegram"></i></a>
-                <a href="mailto:wh1sky02@protonmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://tryhackme.com/p/wh1sky02" target="_blank"><i class="fas fa-flag"></i></a>
+            <div class="terminal-line">
+                <span class="prompt">└─$</span> cat welcome.txt
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="terminal">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="btn-close"></span>
-                        <span class="btn-minimize"></span>
-                        <span class="btn-maximize"></span>
-                    </div>
-                    <div class="terminal-title">terminal</div>
+            <div class="terminal-output">
+                <div class="ascii-art">
+ ██╗    ██╗██╗  ██╗ ██╗███████╗██╗  ██╗██╗   ██╗ ██████╗ ██████╗ 
+ ██║    ██║██║  ██║███║██╔════╝██║ ██╔╝╚██╗ ██╔╝██╔═══██╗╚════██╗
+ ██║ █╗ ██║███████║╚██║███████╗█████╔╝  ╚████╔╝ ██║   ██║ █████╔╝
+ ██║███╗██║██╔══██║ ██║╚════██║██╔═██╗   ╚██╔╝  ██║   ██║██╔═══╝ 
+ ╚███╔███╔╝██║  ██║ ██║███████║██║  ██╗   ██║   ╚██████╔╝███████╗
+  ╚══╝╚══╝ ╚═╝  ╚═╝ ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝
                 </div>
-                <div class="terminal-body">
-                    <div class="terminal-line">
-                        <span class="prompt">$</span> whoami
-                    </div>
-                    <div class="terminal-line">sein_linn</div>
-                    <div class="terminal-line">
-                        <span class="prompt">$</span> cat skills.txt
-                    </div>
-                    <div class="terminal-line">Cybersecurity</div>
-                    <div class="terminal-line">Web Development</div>
-                    <div class="terminal-line">Ethical Hacking</div>
-                    <div class="terminal-line">
-                        <span class="prompt">$</span> echo "Ready to secure the web!"
-                    </div>
-                    <div class="terminal-line">Ready to secure the web!</div>
-                    <div class="terminal-line">
-                        <span class="prompt">$</span> <span class="cursor">|</span>
-                    </div>
+                <div class="welcome-text">
+                    <p><span class="highlight">[INFO]</span> Welcome to Sein Linn's Terminal Portfolio</p>
+                    <p><span class="highlight">[ROLE]</span> Cybersecurity Enthusiast & Full Stack Developer</p>
+                    <p><span class="highlight">[LOCATION]</span> Myanmar</p>
+                    <p><span class="highlight">[STATUS]</span> Computer Science Student | Ready to secure the web!</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a Computer Science student from Myanmar with a passion for cybersecurity 
-                        and web development. I love breaking things (legally) to understand how to 
-                        secure them better.
-                    </p>
-                    <p>
-                        When I'm not hunting for vulnerabilities or building web applications, 
-                        you can find me participating in CTF competitions or contributing to 
-                        open-source security projects.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>2+</h3>
-                            <p>Years Coding</p>
+            <div class="terminal-line">
+                <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
+            </div>
+            <div class="terminal-line">
+                <span class="prompt">└─$</span> ls -la
+            </div>
+            <div class="terminal-output">
+                <div class="file-listing">
+                    <div class="file-item">drwxr-xr-x 2 wh1sky02 wh1sky02 4096 Dec 2024 <span class="file-name">about/</span></div>
+                    <div class="file-item">drwxr-xr-x 2 wh1sky02 wh1sky02 4096 Dec 2024 <span class="file-name">skills/</span></div>
+                    <div class="file-item">drwxr-xr-x 2 wh1sky02 wh1sky02 4096 Dec 2024 <span class="file-name">projects/</span></div>
+                    <div class="file-item">drwxr-xr-x 2 wh1sky02 wh1sky02 4096 Dec 2024 <span class="file-name">contact/</span></div>
+                    <div class="file-item">-rw-r--r-- 1 wh1sky02 wh1sky02  512 Dec 2024 <span class="file-name">help.txt</span></div>
+                </div>
+            </div>
+
+            <!-- Navigation Commands -->
+            <div class="terminal-line">
+                <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
+            </div>
+            <div class="terminal-line">
+                <span class="prompt">└─$</span> cat help.txt
+            </div>
+            <div class="terminal-output">
+                <div class="help-text">
+                    <p><span class="command">Available Commands:</span></p>
+                    <p>  <span class="cmd">whoami</span>          - Display user information</p>
+                    <p>  <span class="cmd">cat about</span>       - View personal information</p>
+                    <p>  <span class="cmd">cat skills</span>      - List technical skills</p>
+                    <p>  <span class="cmd">ls projects</span>     - Show featured projects</p>
+                    <p>  <span class="cmd">cat contact</span>     - Get contact information</p>
+                    <p>  <span class="cmd">clear</span>           - Clear terminal screen</p>
+                    <p>  <span class="cmd">help</span>            - Show this help menu</p>
+                </div>
+            </div>
+
+            <!-- Interactive Command Line -->
+            <div class="command-input-section">
+                <div class="terminal-line">
+                    <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
+                </div>
+                <div class="terminal-line input-line">
+                    <span class="prompt">└─$</span> 
+                    <input type="text" id="command-input" class="command-input" placeholder="Type a command... (try 'help')" autocomplete="off">
+                    <span class="cursor-blink">█</span>
+                </div>
+            </div>
+
+            <!-- Hidden sections that will be shown based on commands -->
+            <div id="about-section" class="hidden-section">
+                <div class="terminal-line">
+                    <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">└─$</span> cat about/bio.txt
+                </div>
+                <div class="terminal-output">
+                    <p><span class="highlight">[ABOUT]</span> Personal Information</p>
+                    <p>I'm a Computer Science student from Myanmar with a passion for cybersecurity</p>
+                    <p>and web development. I love breaking things (legally) to understand how to</p>
+                    <p>secure them better.</p>
+                    <br>
+                    <p>When I'm not hunting for vulnerabilities or building web applications,</p>
+                    <p>you can find me participating in CTF competitions or contributing to</p>
+                    <p>open-source security projects.</p>
+                    <br>
+                    <p><span class="highlight">[STATS]</span></p>
+                    <p>  Years Coding: 2+</p>
+                    <p>  Projects Built: 10+</p>
+                    <p>  Problems Solved: ∞</p>
+                </div>
+            </div>
+
+            <div id="skills-section" class="hidden-section">
+                <div class="terminal-line">
+                    <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">└─$</span> cat skills/technical_skills.json
+                </div>
+                <div class="terminal-output">
+                    <div class="json-output">
+{
+  "programming_languages": [
+    "Python",
+    "JavaScript", 
+    "PHP",
+    "Bash"
+  ],
+  "security_tools": [
+    "Kali Linux",
+    "Burp Suite", 
+    "Wireshark",
+    "Metasploit"
+  ],
+  "frameworks": [
+    "React",
+    "Django",
+    "Node.js",
+    "Express"
+  ],
+  "tools_and_others": [
+    "Git",
+    "Docker",
+    "Linux",
+    "MongoDB"
+  ]
+}
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects-section" class="hidden-section">
+                <div class="terminal-line">
+                    <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">└─$</span> ls -la projects/
+                </div>
+                <div class="terminal-output">
+                    <div class="project-listing">
+                        <div class="project-item">
+                            <div class="project-header">
+                                <span class="file-permissions">-rwxr-xr-x</span> 
+                                <span class="project-name">CafeQR/</span>
+                                <a href="https://github.com/wh1sky02/cafe_qr" target="_blank" class="github-link">[GitHub]</a>
+                            </div>
+                            <div class="project-description">Modern Django QR ordering system for restaurants with real-time order management.</div>
+                            <div class="project-tech">Tech Stack: Django, Python, JavaScript</div>
                         </div>
-                        <div class="stat">
-                            <h3>10+</h3>
-                            <p>Projects Built</p>
+                        
+                        <div class="project-item">
+                            <div class="project-header">
+                                <span class="file-permissions">-rwxr-xr-x</span> 
+                                <span class="project-name">RavenGPT/</span>
+                                <a href="https://github.com/wh1sky02/RavenGPT" target="_blank" class="github-link">[GitHub]</a>
+                            </div>
+                            <div class="project-description">Browser-based GPT application with clean interface and advanced features.</div>
+                            <div class="project-tech">Tech Stack: JavaScript, HTML/CSS, API</div>
                         </div>
-                        <div class="stat">
-                            <h3>∞</h3>
-                            <p>Problems Solved</p>
+                        
+                        <div class="project-item">
+                            <div class="project-header">
+                                <span class="file-permissions">-rwxr-xr-x</span> 
+                                <span class="project-name">API-Validator/</span>
+                                <a href="https://github.com/wh1sky02/openai-api-key-validator" target="_blank" class="github-link">[GitHub]</a>
+                            </div>
+                            <div class="project-description">Bulk OpenAI API key validation tool for developers and businesses.</div>
+                            <div class="project-tech">Tech Stack: Python, API, Automation</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">PHP</span>
-                        <span class="skill-item">Bash</span>
-                    </div>
+            <div id="contact-section" class="hidden-section">
+                <div class="terminal-line">
+                    <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-alt"></i> Security Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Kali Linux</span>
-                        <span class="skill-item">Burp Suite</span>
-                        <span class="skill-item">Wireshark</span>
-                        <span class="skill-item">Metasploit</span>
-                    </div>
+                <div class="terminal-line">
+                    <span class="prompt">└─$</span> cat contact/info.txt
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Frameworks</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">React</span>
-                        <span class="skill-item">Django</span>
-                        <span class="skill-item">Node.js</span>
-                        <span class="skill-item">Express</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Tools & Others</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Linux</span>
-                        <span class="skill-item">MongoDB</span>
+                <div class="terminal-output">
+                    <p><span class="highlight">[CONTACT]</span> Let's Connect!</p>
+                    <p>Interested in cybersecurity, have a project in mind, or just want to chat?</p>
+                    <p>I'd love to hear from you!</p>
+                    <br>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:wh1sky02@protonmail.com">wh1sky02@protonmail.com</a></p>
+                        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/wh1sky02" target="_blank">@wh1sky02</a></p>
+                        <p><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/wh1sky02" target="_blank">@wh1sky02</a></p>
+                        <p><i class="fas fa-flag"></i> TryHackMe: <a href="https://tryhackme.com/p/wh1sky02" target="_blank">wh1sky02</a></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>CafeQR</h3>
-                        <a href="https://github.com/wh1sky02/cafe_qr" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <p>Modern Django QR ordering system for restaurants with real-time order management.</p>
-                    <div class="project-tech">
-                        <span>Django</span>
-                        <span>Python</span>
-                        <span>JavaScript</span>
-                    </div>
+            <div id="whoami-section" class="hidden-section">
+                <div class="terminal-line">
+                    <span class="prompt">┌──(wh1sky02㉿kali-linux)-[~]</span>
                 </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>RavenGPT</h3>
-                        <a href="https://github.com/wh1sky02/RavenGPT" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <p>Browser-based GPT application with clean interface and advanced features.</p>
-                    <div class="project-tech">
-                        <span>JavaScript</span>
-                        <span>HTML/CSS</span>
-                        <span>API</span>
-                    </div>
+                <div class="terminal-line">
+                    <span class="prompt">└─$</span> whoami
                 </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>API Validator</h3>
-                        <a href="https://github.com/wh1sky02/openai-api-key-validator" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <p>Bulk OpenAI API key validation tool for developers and businesses.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>API</span>
-                        <span>Automation</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="contact-description">
-                Interested in cybersecurity, have a project in mind, or just want to chat? 
-                I'd love to hear from you!
-            </p>
-            <div class="contact-grid">
-                <a href="mailto:wh1sky02@protonmail.com" class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>wh1sky02@protonmail.com</p>
-                </a>
-                <a href="https://github.com/wh1sky02" target="_blank" class="contact-card">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                    <p>@wh1sky02</p>
-                </a>
-                <a href="https://t.me/wh1sky02" target="_blank" class="contact-card">
-                    <i class="fab fa-telegram"></i>
-                    <h3>Telegram</h3>
-                    <p>@wh1sky02</p>
-                </a>
-                <a href="https://tryhackme.com/p/wh1sky02" target="_blank" class="contact-card">
-                    <i class="fas fa-flag"></i>
-                    <h3>TryHackMe</h3>
+                <div class="terminal-output">
                     <p>wh1sky02</p>
-                </a>
+                    <br>
+                    <p>uid=1000(wh1sky02) gid=1000(wh1sky02) groups=1000(wh1sky02),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),132(lxd),133(sambashare),142(docker)</p>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Sein Linn. Built with ❤️ and hosted on GitHub Pages.</p>
+        <!-- Footer -->
+        <div class="terminal-footer">
+            <p>&copy; 2024 Sein Linn | Built with ❤️ and hosted on GitHub Pages</p>
             <p class="motto">"Security through knowledge, not obscurity"</p>
         </div>
-    </footer>
+    </div>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
